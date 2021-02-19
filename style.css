@@ -1,0 +1,169 @@
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+*{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+p{
+	margin-top: 10px;
+	font-size: 13px;
+	text-align: justify;
+}
+.container, .book-content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	background-image: url("bday.jpg");
+}
+.book-content{
+	width: 50%;
+    min-width: 500px;
+    max-width: 800px;
+    height: 500px;
+	position: relative;
+	perspective: 1000px;
+	transition: 1s;
+	left: 10%;
+}
+.book{
+	position: absolute;
+	width: 70%;
+	height: 100%;
+	transition: 1s;
+	transform-style: preserve-3d;
+	transform-origin: left;
+}
+.face-front, .face-back{
+	width: 100%;
+	height: 100%;
+	background: white;
+	padding: 15px;
+	box-sizing: border-box;
+	overflow: hidden;
+	font-size: 1.1em;
+    line-height: 1.4;
+    font-family: 'Nobile';
+    color: #331717;
+    font-style: italic;
+}
+.face-front{
+    background: #FFEFEF;
+	box-shadow: inset 3px 0px 20px -7px black;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.face-back{
+    background: #FFEFEF;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateZ(-1px) rotateY(180deg);
+	box-shadow: inset -3px 1px 20px -7px black;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+#portada{
+	background-color: #FF5555;
+}
+#portada-back{
+	background-color: #FF5555;
+}
+#portada, #portada-back{
+	background-size: 100% 100%;
+}
+
+/* Clases que se agregaran con Javascript */
+
+.trnsf{
+	transform: translateX(80px);
+}
+.trnsf-reset{
+	transform: translateX(0px);
+}
+
+
+#container h2 {
+    text-align: center;
+    font-family: 'Nobile', sans-serif;
+    font-style: italic;
+    font-size: 70px;
+    text-shadow:
+        4px 4px 0px rgba(0, 0, 0, .15),
+        1px 1px 0 rgba(255, 200, 200, 255),
+        2px 2px 0 rgba(255, 150, 150, 255),
+        3px 3px 0 rgba(255, 125, 125, 255);
+    color: #FFF;
+    padding-top: 30%;
+}
+
+/* @media para hacer el texto responsivo */
+
+@media screen and (max-width: 800px){
+	p{
+		font-size: 12px;
+	}
+}
+.wrap {
+    padding: 1.5em 2.5em;
+
+}
+.face-back .wrap {
+
+    -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+}
+p {
+    margin-top: 1em;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+p.signed {
+    margin-top: 1.5em;
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.5em;
+}
+.face-front #open{
+	position: absolute;
+	bottom: 1em;
+	right: -12px;
+	background: #F44;
+	color: #FFF;
+	font-family: 'Nobile', sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: .5em;
+	border: none;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px rgb(0 0 0 / 25%), 0 0 1px rgb(0 0 0 / 40%);
+	-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 2px 2px 3px rgb(0 0 0 / 25%), 0 0 1px rgb(0 0 0 / 40%);
+}
+.face-back #close{
+	position: absolute;
+	bottom: 1em;
+	left: -12px;
+	background: #F44;
+	color: #FFF;
+	font-family: 'Nobile', sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: .5em;
+	border: none;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px rgb(0 0 0 / 25%), 0 0 1px rgb(0 0 0 / 40%);
+	-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 2px 2px 3px rgb(0 0 0 / 25%), 0 0 1px rgb(0 0 0 / 40%);
+}
+
+
